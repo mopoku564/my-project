@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.navbar{
+    background-color: orangered;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+.nav-list{
+     display: flex;
+     font-size: 18px;
+     gap: 1em;
+
+}
+.nav-list{
+    color: black;
+    font-size: 19px;
+}
+.nav-list li:hover{
+    background-color: orchid;
+    color: aliceblue;
+}
+nav.active a:hover{
+    font-weight: bold;
+}
+.first{
+    background-image: url("./download.jpg");
+    width: 100%;
+    height: 500px;
+    background-attachment: fixed;
+    background-size: 100% 100%; 
+}
+.SEC1{
+    background-image: url("./images.jpg");
+    width: 100p%;
+    height: 500px;
+    background-attachment: fixed;
+}
