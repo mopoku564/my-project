@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tax calculator</title>
+    </head>
+    <!-- <script src="E_levy.js"></script> -->
+    <link rel="stylesheet" href="./E_levy.css">
+    <body>
+        <div class=TS>
+            <h2>E_LEVY
+                CALCULATOR
+            </h2>
+        </div>
+        
+        <div>
+        <label>
+            Levy percentage
+            <input onkeyup="changepercentage(this)" type="number"/>
+        </label>
+        </div>
+        <div>
+            <label>
+                Amount_sending
+                <input  onchange="changeAmount(this)" type="number"/>
+            </label>
+            </div> 
+            <div>
+                <label>
+                    Amount_receive
+                    <input readonly id="receive"/>
+                </label>
+                <div>
+                    <button onclick="CALCULATE()" id=Levypercentage>CALCULATE</button>
+                </div>
+                </div> 
+                <h4 class="tit"> Levypercentage:1.5 from 100GHS downwards Exempt</h4>
+    </body>
+    <script>
+let Levypercentage=0;
+let Amount_sending=0;
+
+
+function changepercentage (el){
+        Levypercentage= el.value
+    console.log(Levypercentage)
+}
+function changeAmount (el){
+    Amount_sending= el.value
+console.log(Amount_sending)
+
+}
+
+function CALCULATE(){
+    CALCULATE=Levypercentage*Amount_sending/100
+    console.log(CALCULATE)
+    let input=document.getElementById("receive");
+     Amount_receive=Amount_sending-CALCULATE
+    console.log(Amount_receive)
+    input.value=Amount_receive;
+}
+</script>
+</html>
